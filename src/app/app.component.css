@@ -1,0 +1,24 @@
+
+nav {
+  height: 40px;
+}
+
+nav a {
+  display: inline;
+  padding: 10px 15px;
+  margin-right: 5px;
+  background-color: #EEE;
+  border-right: 3px solid #E1E1E1;
+}
+
+nav a:hover, nav a.active {
+  cursor: pointer;
+  background-color: #F5F5F5;
+  border-right-color: #a6d4f5;
+  font-style: italic;
+}
+
+.outlet-wrapper {
+  border: 1px dotted #DDD;
+  padding: 20px;
+}

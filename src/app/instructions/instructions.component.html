@@ -1,0 +1,28 @@
+<h2>Instructions</h2>
+
+<ol>
+  <li>Open the Chrome task manager and identify the process for this tab</li>
+  <li>In the Chrome task manager, make sure the Javascript Memory column is displayed</li>
+  <li>Note down the JS Memory, it should be around 23Mb</li>
+  <li>In each test, we'll push numbers 1 to 1M into an array and observe the JS Memory usage</li>
+</ol>
+
+<h3>Test 1 (Page A)</h3>
+<p>Service Provider Retains No Array Reference & Memory is Released by GC on Destory()</p>
+<ol>
+  <li>In the application, navigate to Page A and click on the "Load Up Array" button to create a large array</li>
+  <li>You'll see the JS Memory allocation climb to about 1.3Gb, then drop back to about 838Mb</li>
+  <li>In the "Destruction Panel", click the first button to destroy the bootstrapped application</li>
+  <li>Run the garbage collector or wait 1-2 minutes - memory will be released</li>
+</ol>
+
+
+<h3>Test 2 (Page B)</h3>
+<p>Service Provider Retains Array Reference, Memory is NOT Released on Destroy()</p>
+<ol>
+  <li>In the application, navigate to Page B. The Page B Service will automatically load up the array.</li>
+  <li>You'll see the JS Memory allocation climb to about 1.3Gb, then drop back to about 838Mb</li>
+  <li>In the "Destruction Panel", click the first button to destroy the bootstrapped application</li>
+  <li>Note in the task manager that the JS Memory allocated has not changed.</li>
+</ol>
+
